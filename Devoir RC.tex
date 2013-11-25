@@ -1,0 +1,160 @@
+%% Based on a TeXnicCenter-Template by Tino Weinkauf.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt]{report}
+% Alternative Options:
+%	Paper Size: a4paper / a5paper / b5paper / letterpaper / legalpaper / executivepaper
+% Duplex: oneside / twoside
+% Base Font Size: 10pt / 11pt / 12pt
+
+
+%% Language %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[francais]{babel} %francais, polish, spanish, ...
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+
+\usepackage{lmodern} %Type1-font for non-english texts and characters
+
+
+%% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} %%For loading graphic files
+%\usepackage{subfig} %%Subfigures inside a figure
+%\usepackage{pst-all} %%PSTricks - not useable with pdfLaTeX
+
+%% Please note:
+%% Images can be included using \includegraphics{Dateiname}
+%% resp. using the dialog in the Insert menu.
+%% 
+%% The mode "LaTeX => PDF" allows the following formats:
+%%   .jpg  .png  .pdf  .mps
+%% 
+%% The modes "LaTeX => DVI", "LaTeX => PS" und "LaTeX => PS => PDF"
+%% allow the following formats:
+%%   .eps  .ps  .bmp  .pict  .pntg
+
+
+%% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+
+%% Line Spacing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{setspace}
+%\singlespacing        %% 1-spacing (default)
+%\onehalfspacing       %% 1,5-spacing
+%\doublespacing        %% 2-spacing
+
+
+%% Other Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{a4wide} %%Smaller margins = more text per page.
+%\usepackage{fancyhdr} %%Fancy headings
+%\usepackage{longtable} %%For tables, that exceed one page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Remarks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Edit the used packages and their options (see above).
+% 2. If you want, add a BibTeX-File to the project
+%    (e.g., 'literature.bib').
+% 3. Happy TeXing!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Options / Modifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{options} %You need a file 'options.tex' for this
+%% ==> TeXnicCenter supplies some possible option files
+%% ==> with its templates (File | New from Template...).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{empty} %No headings for the first pages.
+
+
+%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Write your text here or include other files.
+
+%% The simple version:
+\title{Devoir de Représentation des Connaissances}
+\author{Sébastien Bazin
+\and Oumar Fondi
+\and Mayas Haddad}
+%\date{} %%If commented, the current date is used.
+\maketitle
+
+%% The nice version:
+%\input{titlepage} %%You need a file 'titlepage.tex' for this.
+%% ==> TeXnicCenter supplies a possible titlepage file
+%% ==> with its templates (File | New from Template...).
+
+
+%% Inhaltsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents %Table of contents
+\cleardoublepage %The first chapter should start on an odd page.
+
+\pagestyle{plain} %Now display headings: headings / fancy / ...
+
+\chapter{Introduction}\label{intro}
+
+\section{Problématique}\label{problématique}
+La problématique traitée lors de ce devoir est la représentation de connaissances en respectant le formalisme en cours de Représentation des Connaissances.
+L'intérêt est d'obtenir un ensemble d'éléments de connaissance sur lesquels on puisse exécuter des requêtes par un système automatisé dans un but d'interrogation.
+
+\section{Le domaine représenté}\label{domaine représenté}
+Dans ce qui suit, nous allons représenter une bataille navale qui a eu lieu le au XIX\ieme  siècle en mer méditerranée, elle a opposé l'alliance des puissances, à savoir le Royaume-uni, le Royaume de France et l'empire russe, à l'alliance ottomane qui fut composée de l'empire ottoman, la province d’Égypte et des régences Algéroise et Tunisoise.
+
+\section{Démarche}\label{démarche}
+La démarche va s'articuler de la manière suivante :
+\begin{itemize}
+\item Énoncer les faits que nous avons choisi de formaliser
+\item Représenter notre support, autrement dit, le quintuplet $( T_{c}, T_{r} , M, \tau, \sigma)$
+\item Représenter visuellement nos graphes d'instances
+\end{itemize}
+
+Dans un deuxième temps, nous allons traiter quelques requête en respectant les consignes de l'énoncé du devoir.
+
+\section{Remarques}\label{remarques}
+Le sujet traité relate des faits historiques repris de l'article Wikipédia (voir sources) à sa version du 23 novembre 2013. La véracité de ces faits n'a fait l'objet d'aucune vérification de la part des éléments de notre trinôme.
+
+Pour simplifier notre représentation, les faits, bien qu'il soient historiques, seront décrits en utilisant \textit{est} au lieu de \textit{était} ou \textit{fut}.
+
+Aussi, pour des raisons de concision, nous n'avons traité ici que les sections suivantes de l'article source :
+\begin{itemize}
+\item Composition des deux flottes.
+\item Bilan de la bataille.
+\end{itemize}
+
+\chapter{Construction du modèle}\label{1st step}
+\section{Base de connaissances en français}\label{représenter BF en français}
+La bataille de Navarin a opposé les alliances ottomane et celle des puissances le 20 octobre 1827 à Navarin dans le Péloponnèse en Grèce.
+L'alliance des puissances est composée du Royaume-uni, le royaume de France et de l'empire russe.
+De l'autre côté, l'alliance ottomane est composée de l'empire ottoman, de la province d’Égypte et des régences Algéroise et Tunisoise.
+
+Du côté de l'alliance ottomane, la flotte est composée comme suit :
+L'empire ottoman (Turquie) est fort du vaisseau amiral \textit{Guhu-Reva}, frégate commandée par Tahir Pasha, les frégates \textit{Burj-Zafer, Fatih-Bahri, Fevz-Nussret, Ka'id-Zafer, Keywan-Bahri, Feyz-Mi'rag} et \textit{la Mejra-Zafer}. Ces dernières sont des vaisseaux de lignes.
+La province d’Égypte quant à elle a pour frégates : \textit{la Guerrière}, qui est le vaisseau amiral de Moharrem Bey, \textit{l'Ihsania} commandée par Hassan Bey, la Leone et \textit{la Souriya}. Ajoutez à cela deux corvettes.
+La régence d'Alger est forte de quatre frégates, quatre corvettes et cinq bricks. Leurs noms ne sont pas communiqués ainsi que la force de la flotte Tunisoise car celles-ci battaient pavillon turc.
+
+Celle de l'alliance des puissances est composée de la manière suivante :
+Le Royaume-uni est fort de l'Asia, vaisseau amiral commandé par le vice-amiral Sir Edward Codrington, les vaisseaux de ligne que sont les frégates Genoa, Albion, Glasgow, Cambrian, Dartmouth, Talbot, des bricks ou schooners Rose, Brisk, Mosquito et Philomel. Ainsi que du cutter Hind.
+Le royaume de France est lui fort du vaisseau amiral, la frégate Sirène commandée par le contre-amiral Henry de Rigny, les vaisseaux de ligne, les frégates : Breslan, commandé par le capitaine Botherel de la Bretonnière; Scipion, commandée par le capitaine Pierre Bernard Milius; Trident, commandée par le capitaine Morice; Armide, commandée par le capitaine Hugon. Les goélettes Alcyone et Daphné commandée respectivement par les capitaines Turpin et Frézier.
+L'empire russe est fort du vaisseau amiral Azov commandé par l'amiral Login Geiden, les vaisseaux de ligne que sont les frégates : Gangut, commandée par le capitaine Alexander Pavlovitch Avinov; L'Alexandr Nevskii, commandée par le capitaine Bogdanovitch; L'Iezekiil commandée par le capitaine Zvinkin; La Provornyi, commandée par le capitaine Epantschin-Cadet; La Konstantin commandée par le capitaine Krouchtchev; L'Elena, commandée par le capitaine Epantschin-Aîné et la Kastor commandée par le capitaine Sittin.
+\section{Support}\label{représenter la quintuplet}
+\section{Graphes d'instance et interprétation logique}\label{graphes d'instance}
+\chapter{Interrogation}\label{2nd step}
+\chapter{Conclusion}\label{conclusion}
+\end{document}
